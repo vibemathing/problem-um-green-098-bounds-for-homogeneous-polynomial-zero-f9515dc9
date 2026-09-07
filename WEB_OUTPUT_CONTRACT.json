@@ -52,14 +52,6 @@
     "kernel_checked",
     "result_admitted"
   ],
-  "harness_maintenance_policy": {
-    "branch_prefix": "maintenance/harness-",
-    "exact_regenerated_snapshot_delta_required": true,
-    "mathematical_state_changes_allowed": false,
-    "trusted_actors": [
-      "vibemathing"
-    ]
-  },
   "limits": {
     "max_file_bytes": 1048576,
     "max_files_per_pull_request": 64,

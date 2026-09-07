@@ -73,41 +73,7 @@ Then establish and report these facts without guessing:
 
 Return the bootstrap acknowledgement required by `research/schema/web-bootstrap-ack.schema.json` when the channel requests it.
 
-### 3.1 Mandatory mathematical reasoning discipline
-
-<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
-
-All problem admission, candidate generation, derivation, construction, computation, proof, formalization, verification, and Result review MUST follow `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md` and the machine policy in `governance/control-plane/mathematical-reasoning-discipline.v1.json`.
-
-Use this auditable sequence:
-
-```text
-definition and scope freeze
-  -> traceable dependency chain
-  -> explicit construction or witness
-  -> counterexample pressure test
-  -> invariant analysis
-  -> monovariant and termination
-  -> extremal / symmetry / probability checks
-  -> scale and boundary checks
-  -> verifiable evidence and an honest conclusion
-```
-
-A method may be inapplicable, but that decision and its reason must be explicit. Before saving a candidate, record which applicable checks were completed, failed, or remain open.
-
-Logic safeguards are mandatory:
-
-- Ordinary induction is `prove the base case -> assume P(n) for an arbitrary allowed n -> derive P(n+1) -> state the covered domain and step`. Finite examples, bounded enumeration, or an observed recurrence are not induction.
-- Contraposition may use `not Q -> not P` only for an established target implication `P -> Q`, with the same domain, quantifiers, and assumptions. Do not infer the converse `Q -> P`, the inverse `not P -> not Q`, or call absence of a sufficient condition absence of a necessary condition.
-- An existence claim needs an explicit checkable witness/certificate/algorithm, or a precise declaration that the proof is nonconstructive. Claims of correctness, implementability, scalability, or termination need their own dependency chain, runnable artifact, resource/complexity boundary, termination argument, and negative tests.
-- Attack the smallest cases, minimal counterexamples, degenerate/extreme parameters, assumption sensitivity, known obstructions, and scale transitions before polishing a universal proof.
-- For iterative arguments, distinguish an invariant from a strictly monotone quantity and give a well-founded termination order plus the bridge from terminal state to the target.
-- Check extremal choices, symmetry quotients/fixed points, probabilistic-method hypotheses, and local/global or finite/asymptotic transitions whenever relevant.
-- Computation, solver output, formal elaboration, kernel success, model review, CI, PR, or merge establishes only its exact recorded scope. Kernel evidence still requires statement-faithfulness and axiom/escape audits.
-
-If any applicable item is unresolved, preserve it as an open Obligation, FailedRoute, bounded Candidate, or `inconclusive`; never silently promote it to mathematical closure. A nested `AGENTS.md` may tighten this discipline but cannot omit or weaken it.
-
-### 3.2 Fresh-state precedence and admission dimensions
+### 3.1 Fresh-state precedence and admission dimensions
 
 Every research turn starts with a fresh read of the current default branch and live GitHub objects. Use this precedence for state facts:
 
@@ -146,8 +112,7 @@ Issue creation is idempotent. Search open and closed Issues by the tuple `(probl
 | `.codex/skills/**` | Fixed mathematical method/router contracts | Read-only during research |
 | `governance/control-plane/**` | Source/operator registries and Harness contracts | Read-only during research |
 | `research/schema/**`, `scripts/**`, `.github/workflows/**` | Schemas, trusted code, and gates | Maintainer-only change |
-| `HARNESS_SNAPSHOT.json` | Current fixed suite identity and file digests | Never hand-edit |
-| `HARNESS_SNAPSHOT_HISTORY.json` | Append-only historical snapshot/importer bindings for immutable packets | Harness maintainer only |
+| `HARNESS_SNAPSHOT.json` | Fixed suite identity and file digests | Never hand-edit |
 
 A tool being technically able to write a path does not grant permission to write it. GitHub `contents: write` is not a path ACL; `WEB_CHANNEL_PROFILE.json`, `WEB_OUTPUT_CONTRACT.json`, the diff gate, and the closest `AGENTS.md` define the admitted surface.
 
@@ -178,9 +143,8 @@ Determine the role from the direct task, machine profile, actual principal, and 
 
 ### Harness maintainer
 
-- Acts only on an explicit maintenance task and a `maintenance/harness-*` branch under the allowlisted `vibemathing` maintainer identity.
+- Acts only on an explicit maintenance task and a separate trusted branch.
 - Rebuilds generated context/snapshots and runs the full Harness tests after changing contracts, Skills, schemas, scripts, or workflow.
-- The PR diff must equal the old/new Harness-owned snapshot delta plus regenerated control files; ProblemContract, records, candidate artifacts, EvidenceLinks, Results and Solution views cannot change.
 - Maintenance authority is not mathematical admission authority.
 
 ## 6. Skill routing: use the suite as a system
