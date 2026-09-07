@@ -1,0 +1,33 @@
+{
+  "entries": [
+    {
+      "harness_snapshot_sha256": "91d0c595f8828c04d098e10ab700e556f62a8e06f22465a70d07875ad49b0cab",
+      "harness_version": "1.2.2",
+      "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+      "source_manifest_sha256": "af805d9ab19f39597349ad102bde40053b9ad693616559ad0af039d5c1cbfe02",
+      "tree_sha256": "8f8bab26d1b2ecd0c1b44b409295b40e5aa9005fe0b01331e16b2b0bfb9b1d98"
+    },
+    {
+      "harness_snapshot_sha256": "7026a08f75e67744f59bdfb4c08e43a88bd689df84db6004b41a796250810b71",
+      "harness_version": "1.2.3",
+      "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+      "source_manifest_sha256": "27a22779f4ea8418115002a4a180553b0f23425b69e4deb76f2bd6ae893b2993",
+      "tree_sha256": "a5f58473939760a0e4edf696d5d0a8083b07ecfa0644f18092f450dc6ce5d913"
+    },
+    {
+      "harness_snapshot_sha256": "a9ae2bc14e33fba31934d2a44e3c37bfbb52a3a1cf098d646b31c9c5ddf173e3",
+      "harness_version": "1.2.4",
+      "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+      "source_manifest_sha256": "fedd664f1ac16c5232eb05076b73f2bab566ed672840e7f2af851c77253813b3",
+      "tree_sha256": "4cd282256d411fe493a82ef0050b5463e57339f15bd7a7c829a6f5d2fa1d0c7e"
+    }
+  ],
+  "repository": "vibemathing/vibe-mathing-problem-public-template",
+  "repository_identity": {
+    "database_id": 1358726712,
+    "default_branch": "main",
+    "node_id": "R_kgDOUPyGOA",
+    "visibility": "public"
+  },
+  "schema_version": "1.0.0"
+}
